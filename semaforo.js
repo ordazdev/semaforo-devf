@@ -17,7 +17,10 @@ function cambiarLuz() {
             break;
     }
 
-    indice = (indice + 1) % colores.length;
+    indice++;
+if (indice >= colores.length) {
+    indice = 0;
+}
 }
 
-setInterval(cambiarLuz, 3000); // Cambia cada 3 segundos
+setInterval(cambiarLuz, 3000); 
